@@ -17,6 +17,7 @@
                 $user = new User();
                 $user->setEmail($email);
                 $user->setPassword($passwd);
+
                 if ($manager->add($user)) {
                     $_SESSION['message'] = "Utilisateur ajouté";
                 }
@@ -47,7 +48,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Ajouter un Utilisateur</title>
+        <title>Connexion</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
@@ -64,7 +65,7 @@
                         }
                     ?>
 
-                    <h1>Ajouter un Utilisateur</h1>
+                    <h1>Connexion</h1>
 
                     <form method="post">
                         <div class="form-group">
@@ -75,10 +76,9 @@
                             <label for="passwd">Mot de Passe</label>
 
                             <input type="password" id="passwd" name="passwd" class="form-control">
-
                         </div>
-                        
-                        <button class="btn btn-primary">Enregistrer</button>
+
+                        <button class="btn btn-primary">Se connecter</button>
                     </form>
                 </section>
             </div>
